@@ -1,0 +1,80 @@
+  body {
+      font-family: Arial, sans-serif; /* Consider using a more modern font stack */
+      margin: 0;
+      padding: 0;
+      line-height: 1.6; /* Improved readability */
+      color: #333; /* Consistent text color */
+      background-color: #f4f4f4; /* Light background for better contrast */
+  }
+  
+  /* Section Styling with Enhanced Spacing and Borders */
+  section {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 15px; /* Add margin between sections */
+      background-color: #fff; /* White background for sections */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle depth effect */
+  }
+  
+  /* Heading Styles */
+  h2 {
+      color: #2c3e50; /* Slightly darker, more professional color */
+      border-bottom: 2px solid #3498db; /* Add an underline effect */
+      padding-bottom: 10px; /* Space under the underline */
+      margin-bottom: 15px; /* Space below the heading */
+  }
+
+  li :hover {
+    cursor: pointer;
+  }
+
+  .project-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 10px;
+    border: 3px solid black;
+    z-index: 1000;
+    overflow: auto;
+  }
+
+  .project-popup .carousel {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .project-popup .carousel-inner {
+    height: 100%;
+  }
+  
+  .project-popup .carousel-item {
+    height: 100%;
+  }
+  
+  .project-popup .carousel-item svg {
+    height: 100%;
+    object-fit: cover;  /* Optional for images or SVGs */
+  }
+
+  .message-textarea {
+    margin-bottom: 20px;
+    height: 200px;
+    width: 100%;
+  }
+  
+  /* Responsive Considerations */
+  @media (max-width: 768px) {
+      section {
+          padding: 15px; /* Slightly reduced padding on smaller screens */
+      }
+  }
+    
