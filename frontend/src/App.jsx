@@ -10,19 +10,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function App() {
 
-  const [currentPage, setCurrentPage] = useState(<About />)
-  function changePage(page) {
-    if (page === 'About') {
-      setCurrentPage(<About />)
-    } else if (page === 'Projects') {
-      setCurrentPage(<Projects />)
-    } else if (page === 'Skills') {
-      setCurrentPage(<Skills />)
-    } else if (page === 'Contact') {
-      setCurrentPage(<Contact />)
-    }
-  }
-
   return (
     <div>
       <Router>

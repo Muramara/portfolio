@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Contact from './Contact';
 import Popup from './Popup'
+import ContactPopup from './ContactPopup';
   
   export default function Projects() {
-    const [showPopup, setShowPopup] = useState(false)
+    
+    const [showPopup, setShowPopup] = useState(false);
+
+    const [showContactPopup, setShowContactPopup] = useState(false);
 
     const [imgNames, setImgNames] = useState([]);
 
@@ -16,15 +22,27 @@ import Popup from './Popup'
     return (
       <section>
         {showPopup && (<Popup onClose={setShowPopup} onFolder={imgFolder} onImgNames={imgNames} onClear={handleClosePopup} />)}
+        {showContactPopup && (<ContactPopup onClose={setShowContactPopup} />)}
         <main>
           <section class="py-5 text-center container">
             <div class="row py-lg-5">
               <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">Album example</h1>
-                <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                <h1 class="fw-light">Works by Me</h1>
+                <p class="lead text-body-secondary">Below are some projects done by me.</p>
                 <p>
-                  <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                  <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                  <a href="https://github.com/Muramara" class="btn btn-primary my-2" target='_blank'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg> GitHub
+                  </a>
+                  {/* <a href="#" class="btn btn-secondary my-2">Contact Me</a> */}
+                  <button
+                    className='btn btn-secondary my-2'
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setShowContactPopup(true);
+                    }}
+                    >Contact Me</button>
                 </p>
               </div>
             </div>
@@ -56,7 +74,13 @@ import Popup from './Popup'
                               setShowPopup(true);
                             }}
                             >View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          <a href="https://github.com/Muramara/Air-Weather-info-usin-IQAir-API" target='_blank'>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                              </svg> GitHub
+                              </button>
+                            </a>
                         </div>
                         <small class="text-body-secondary">9 mins</small>
                       </div>
@@ -85,7 +109,13 @@ import Popup from './Popup'
                               setShowPopup(true);
                             }}
                             >View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          <a href="https://github.com/Muramara/Blog-Post-Site-with-RESTful-API" target='_blank'>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                              </svg> GitHub
+                              </button>
+                            </a>
                         </div>
                         <small class="text-body-secondary">9 mins</small>
                       </div>
@@ -116,7 +146,13 @@ import Popup from './Popup'
                               setShowPopup(true);
                             }}
                             >View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <a href="https://github.com/Muramara/Book-Notes" target='_blank'>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                              </svg> GitHub
+                              </button>
+                            </a>
                         </div>
                         <small class="text-body-secondary">9 mins</small>
                       </div>
