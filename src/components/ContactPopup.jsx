@@ -11,9 +11,9 @@ export default function ContactPopup(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = 'service_57kh6wf';
-    const templateID = 'template_zz7635r';
-    const publicKey = 'eR0F6Qb-mfTPoXpdI';
+    const serviceID = import.meta.env.process.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.process.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.process.env.VITE_PUBLIC_KEY;
 
     emailjs.send(serviceID, templateID, {
       name: formData.name,

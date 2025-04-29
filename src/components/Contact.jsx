@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import emailjs from 'emailjs-com'; // 📦 install this if you haven't
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -11,9 +10,9 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = process.env.REACT_APP_SERVICE_ID;
-    const templateID = process.env.REACT_APP_TEMPLATE_ID;
-    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+    const serviceID = import.meta.env.process.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.process.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.process.env.VITE_PUBLIC_KEY;
 
     emailjs.send(serviceID, templateID, {
       name: formData.name,
