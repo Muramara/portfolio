@@ -11,9 +11,9 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = 'service_57kh6wf';
-    const templateID = 'template_zz7635r';
-    const publicKey = 'eR0F6Qb-mfTPoXpdI';
+    const serviceID = process.env.REACT_APP_SERVICE_ID;
+    const templateID = process.env.REACT_APP_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
     emailjs.send(serviceID, templateID, {
       name: formData.name,

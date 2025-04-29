@@ -33,13 +33,13 @@ export default function ContactPopup(props) {
 
   return (
     <section className='project-popup'>
-      <div class="container col-xl-10 col-xxl-8 px-4 py-0 popup-form">
-        <div class="row align-items-center g-lg-5 py-0">
-          <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Get In Touch</h1>
-            <p class="col-lg-10 fs-4">Provide your name, email and any message you would like to get to me and I will be sure to get back to you.</p>
+      <div className="container col-xl-10 col-xxl-8 px-4 py-0 popup-form">
+        <div className="row align-items-center g-lg-5 py-0">
+          <div className="col-lg-7 text-center text-lg-start">
+            <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">Get In Touch</h1>
+            <p className="col-lg-10 fs-4">Provide your name, email and any message you would like to get to me and I will be sure to get back to you.</p>
             <button
-                class="btn btn-secondary rounded-pill px-3"
+                className="btn btn-secondary rounded-pill px-3"
                 onClick={(event) => {
                     event.preventDefault();
                     props.onClose(false);
@@ -47,22 +47,21 @@ export default function ContactPopup(props) {
                 }}>Close Form
             </button>
           </div>
-          <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit}>
-              <div class="form-floating mb-3">
-                <input name="name" type="text" class="form-control" id="floatingInput" placeholder="Name" value={formData.name} onChange={handleChange} required />
-                <label for="floatingInput">Name</label>
+          <div className="col-md-10 mx-auto col-lg-5">
+            <form className="p-4 p-md-5 border rounded-3 bg-body-tertiary" onSubmit={handleSubmit}>
+              <div className="form-floating mb-3">
+                <input name="name" type="text" className="form-control" id="floatingInput" placeholder="Name" value={formData.name} onChange={handleChange} required />
+                <label htmlFor="floatingInput">Name</label>
               </div>
-              <div class="form-floating mb-3">
-                <input name="email" type="email" class="form-control" id="floatingInput" placeholder="Email" value={formData.email} onChange={handleChange} required />
-                <label for="floatingInput">Email address</label>
+              <div className="form-floating mb-3">
+                <input name="email" type="email" className="form-control" id="floatingInput" placeholder="Email" value={formData.email} onChange={handleChange} required />
+                <label htmlFor="floatingInput">Email address</label>
               </div>
-              <div class="form-floating">
-                <textarea name="message" class="message-textarea" placeholder="Leave a message here" id="floatingTextarea2" value={formData.message} onChange={handleChange} required></textarea>
-                {/* <label for="floatingTextarea2">Message</label> */}
+              <div className="form-floating">
+                <textarea name="message" className="message-textarea" placeholder="Leave a message here" id="floatingTextarea2" value={formData.message} onChange={handleChange} required></textarea>
               </div>
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Send</button>
-              <hr class="my-4"/>
+              <button className="w-100 btn btn-lg btn-primary" type="submit">Send</button>
+              <hr className="my-4"/>
             </form>
           </div>
         </div>
