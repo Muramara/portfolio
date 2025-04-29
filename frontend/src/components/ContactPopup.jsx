@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
+import emailjs from 'emailjs-com';
 
 export default function ContactPopup(props) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
@@ -8,29 +8,27 @@ export default function ContactPopup(props) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    props.onClose(false);
-    props.onSend();
-  
-    try {
-      const response = await fetch('http://localhost:1300/api/message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      });
-  
-      const result = await response.json();
-      if (result.success) {
-        alert("Message sent successfully!");
+
+    const serviceID = 'service_57kh6wf';
+    const templateID = 'template_zz7635r';
+    const publicKey = 'eR0F6Qb-mfTPoXpdI';
+
+    emailjs.send(serviceID, templateID, {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    }, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Something went wrong.");
-    }
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        alert('Something went wrong.');
+      });
   };
 
   return (
