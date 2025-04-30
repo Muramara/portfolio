@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -10,10 +11,18 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = import.meta.env.process.env.VITE_SERVICE_ID;
-    const templateID = import.meta.env.process.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.process.env.VITE_PUBLIC_KEY;
-
+    console.log(formData);
+  
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  
+    console.log('Submitting form with the following data:');
+    console.log('Service ID:', serviceID);
+    console.log('Template ID:', templateID);
+    console.log('Public Key:', publicKey);
+    console.log('Form Data:', formData);
+  
     emailjs.send(serviceID, templateID, {
       name: formData.name,
       email: formData.email,
@@ -25,8 +34,8 @@ export default function Contact() {
         setFormData({ name: '', email: '', message: '' });
       })
       .catch((error) => {
-        console.error('FAILED...', error);
-        alert('Something went wrong.');
+        console.error('FAILED to send email. Error:', error);
+        alert('Something went wrong while sending the message. Please try again later.');
       });
   };
 
