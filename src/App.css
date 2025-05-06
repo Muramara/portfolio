@@ -28,6 +28,12 @@
     cursor: pointer;
   }
 
+  .about-p {
+    text-align: justify;
+  }
+.text-container {
+  height: 230px;
+}
   .project-popup {
     position: fixed;
     top: 50%;

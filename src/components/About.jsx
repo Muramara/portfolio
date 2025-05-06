@@ -28,7 +28,7 @@ export default function About() {
                   </svg>
               </div>
               <h2 className="fw-normal" style={{textAlign: 'center'}}>Higher Learning</h2>
-              <p>Graduated from Strathmore University with a second class (upper) degree in Bachelor of Business Information Technology.</p>
+              <p>Obtained a Bachelor of Business Information Technology degree with Second Class Honours (Upper Division) from Strathmore University.</p>
             </div>
             <div className="col-lg-4">
               <div style={{textAlign: 'center'}}>
@@ -38,7 +38,7 @@ export default function About() {
                 </svg>    
               </div>
               <h2 className="fw-normal" style={{textAlign: 'center'}}>Professional Courses</h2>
-              <p>Took on an online course in Full Stack Web Development, building the foundation for my web development journey.</p>
+              <p>Completed an online course in Full Stack Web Development, establishing a strong foundation for my career in web development.</p>
             </div>
             <div className="col-lg-4">
               <div style={{textAlign: 'center'}}>
@@ -49,8 +49,8 @@ export default function About() {
               </div>
               <h2 className="fw-normal" style={{textAlign: 'center'}}>Work Experience</h2>
               <p>
-              Worked as a Business Analyst Intern at KCB, which entailed being mostly involved with the design phase of the SDLC process. <br /><br />
-              Worked as a Software Developer Intern at Dew CIS Solutions Ltd, being involved in API development and database design
+              Served as a Business Analyst Intern at KCB, primarily contributing to the design phase of the Software Development Life Cycle (SDLC). <br /><br />
+              Currently working as a Software Developer Intern at Dew CIS Solutions Ltd, with a focus on API development and database design.
               </p>
             </div>
           </div>

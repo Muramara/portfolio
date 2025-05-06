@@ -50,8 +50,10 @@ import ContactPopup from './ContactPopup';
                 <div className="col">
                   <div className="card shadow-sm">
                     <img src="images/AirWeather/main-page.png" alt="Air/Weather App" />
-                    <div className="card-body">
-                      <p className="card-text">The Air/Weather App description.</p>
+                    <div className="card-body text-container">
+                      <p className="card-text">
+                      A Node.js application that provides real-time, location-based air quality and weather information using the IQAir API.
+                      </p>
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
                           <button
@@ -86,8 +88,10 @@ import ContactPopup from './ContactPopup';
                 <div className="col">
                   <div className="card shadow-sm">
                     <img src="images/BlogPosts/posted-blog.png" alt="Blog Posts App" />
-                    <div className="card-body">
-                      <p className="card-text">Blog Posts Site Description.</p>
+                    <div className="card-body text-container">
+                      <p className="card-text">
+                      On a front-end perspective, the website allows the user to make a post, edit it and also delete, as well as view all the posts that have been made.
+                      </p>
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
                         <button
@@ -120,8 +124,11 @@ import ContactPopup from './ContactPopup';
                 <div className="col">
                   <div className="card shadow-sm">
                     <img src="images/BookNotes/page-with-review.png" alt="Blog Posts App" />
-                    <div className="card-body">
-                      <p className="card-text">Book Notes Site Description.</p>
+                    <div className="card-body text-container">
+                      <p className="card-text">
+                      A simple application for tracking your book reading history, notes, and ratings.
+                      It uses the openlibrary API to fetch book covers. This is accomplished by providing the ISBN-10 value of the book being reviewed.
+                      </p>
                       <div className="d-flex justify-content-between align-items-center">
                         <div className="btn-group">
                         <button
