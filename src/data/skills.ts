@@ -8,6 +8,7 @@ export type SkillCategory = 'Frontend Development' | 'Backend Development' | 'UI
 export const skills: Record<string, Skill[]> = {
   'Frontend Development': [
     { name: 'HTML/CSS', level: 95 },
+    { name: 'JSP', level: 94 },
     { name: 'JavaScript', level: 90 },
     // { name: 'TypeScript', level: 85 },
     { name: 'React', level: 88 },
@@ -18,6 +19,7 @@ export const skills: Record<string, Skill[]> = {
   'Backend Development': [
     { name: 'Node.js', level: 90 },
     { name: 'Express', level: 90 },
+    { name: 'Java', level: 85 },
     // { name: 'Python', level: 75 },
     // { name: 'Django', level: 70 },
     // { name: 'GraphQL', level: 78 },

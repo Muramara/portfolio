@@ -78,13 +78,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             )}
           </div>
           
-          <a 
+          {/* <a 
             href={`#project-${project.id}`} 
             className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
           >
             <span className="mr-1">Details</span>
             <ArrowRight size={16} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
