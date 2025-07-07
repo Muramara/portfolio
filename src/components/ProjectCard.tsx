@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <Github size={20} />
               </a>
             )}
-            {project.live && (
+            {/* {project.live && (
               <a 
                 href={project.live} 
                 target="_blank" 
@@ -75,7 +75,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               >
                 <ExternalLink size={20} />
               </a>
-            )}
+            )} */}
           </div>
           
           {/* <a 
