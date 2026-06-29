@@ -10,15 +10,16 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     type: 'work',
-    title: 'Software Developer Intern',
+    title: 'Software Developer',
     organization: 'Dew CIS Solutions Ltd',
     period: 'Jan 2025 - Present',
-    description: 'Develop, modify and maintain system and database code',
+    description: 'Develop and maintain backend systems, optimize PostgreSQL databases, manage remote Linux infrastructure, and lead technical onboarding for engineering team members.',
     highlights: [
-      'Modified an API to accurately extract and display CV data once a user has uploaded their CV',
-      'Collaborated in a team to create a travel website for a client, using WordPress',
-      'Designed user reports for enhanced data visualization for one of the company clients',
-      'Designed system generated contracts using Jasper Reports for a client looking to enhance their onboarding process',
+      'Spearheaded the remote deployment and rollout of the corporate HR system for multiple enterprise clients.',
+      'Engineered and deployed customized application modules tailored to specific client business requirements.',
+      'Trained and mentored engineering interns, successfully transitioning them to manage independent projects.',
+      'Engineered a Java API to parse and display structured CV data from user uploads.',
+      'Automated workflows by creating system-generated contracts and reports via Jaspersoft Studio.',
     ]
   },
   {

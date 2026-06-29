@@ -1,4 +1,4 @@
-export type Category = 'web' | 'mobile' | 'design' | 'other';
+export type Category = 'web' | 'mobile' | 'design' | 'API' | 'database';
 
 export interface Project {
   id: number;
@@ -65,17 +65,17 @@ export const projects: Project[] = [
   //   technologies: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
   //   live: "https://behance.net/username/brand-identity"
   // },
-  // {
-  //   id: 6,
-  //   title: "Smart Home IoT Dashboard",
-  //   description: "An IoT dashboard for controlling and monitoring smart home devices.",
-  //   summary: "Built an IoT control dashboard that integrates with various smart home devices, allowing users to monitor and control their home environment remotely.",
-  //   category: "other",
-  //   image: "https://images.pexels.com/photos/4099358/pexels-photo-4099358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  //   technologies: ["React", "Node.js", "MQTT", "WebSockets", "Raspberry Pi"],
-  //   github: "https://github.com/username/smart-home",
-  //   live: "https://smart-home.example.com"
-  // },
+  {
+    id: 6,
+    title: "Employee Management System with Database REPL Tool",
+    description: "A full-stack employee management application with a web interface and a custom database REPL tool.",
+    summary: "The project showcases a functional RDBMS implementation with support for table declarations, CRUD operations, indexing, primary and unique key constraints, and SQL joins.",
+    category: "database",
+    image: "/images/staff.jpg",
+    technologies: ["Java", "Node.js", "Postgres", "HTML"],
+    github: "https://github.com/Muramara/simpl_rdbms",
+    live: ""
+  },
   {
     id: 7,
     title: "Live Global Weather Updates Website",
@@ -85,28 +85,28 @@ export const projects: Project[] = [
     image: "/images/weather-app-icon.jpg",
     technologies: ["HTML", "JavaScript", "Node.js", "Express", "EJS", "RESTful APIs"],
     github: "https://github.com/Muramara/Air-Weather-info-usin-IQAir-API",
-    live: "https://smart-home.example.com"
+    live: ""
   },
-  {
-    id: 8,
-    title: "Book Notes",
-    description: "A website where multiple users can write notes about books they have read.",
-    summary: "A website that allows multiple users to create, edit and delete notes about books they have read. The website also uses the OpenLibrary API to fetch book covers for each book written about in the notes",
-    category: "web",
-    image: "/images/reading.jpg",
-    technologies: ["HTML", "JavaScript", "Node.js", "Express", "EJS", "RESTful APIs", "PostgreSQL"],
-    github: "https://github.com/Muramara/Book-Notes",
-    live: "https://smart-home.example.com"
-  },
+  // {
+  //   id: 8,
+  //   title: "Book Notes",
+  //   description: "A website where multiple users can write notes about books they have read.",
+  //   summary: "A website that allows multiple users to create, edit and delete notes about books they have read. The website also uses the OpenLibrary API to fetch book covers for each book written about in the notes",
+  //   category: "web",
+  //   image: "/images/reading.jpg",
+  //   technologies: ["HTML", "JavaScript", "Node.js", "Express", "EJS", "RESTful APIs", "PostgreSQL"],
+  //   github: "https://github.com/Muramara/Book-Notes",
+  //   live: "https://smart-home.example.com"
+  // },
   {
     id: 9,
-    title: "Blog Post website",
-    description: "A website that allows one to post multiple blogs.",
-    summary: "Posts can be created, edited and deleted, and are all listed on the home page. The site uses two APIs; one stores the posts in object and sends the object as json, the other receives requests from the website and forwards them to the server holding the posts object and receives the json response, which it forwards to the website",
-    category: "web",
-    image: "/images/typewriter.jpg",
-    technologies: ["HTML", "JavaScript", "Node.js", "Express", "EJS", "RESTful APIs"],
-    github: "https://github.com/Muramara/Blog-Post-Site-with-RESTful-API",
-    live: "https://smart-home.example.com"
+    title: "Order Management API",
+    description: "A secure, scalable REST API engineered to handle client-server communication for user verification, inventory control, and order tracking.",
+    summary: "Implements stateless JWT authentication for secure route protection and complete CRUD operations",
+    category: "API",
+    image: "/images/order.jpg",
+    technologies: ["JWT (jsonwebtoken)", "TypeScript", "Node.js", "Express", "Postgres", "Prisma"],
+    github: "https://github.com/Muramara/order_management_API",
+    live: ""
   }
 ];
